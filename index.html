@@ -29,13 +29,13 @@
                                 </div>
                             </div>
                         
-                            <div class="col-md-8">
-                            <div class="d-lg-none d-md-none">
+                            <div class="col-md-8 col-sm-12 first">
+                            <!----<div class="d-lg-none d-md-none">
                                 <span class="text-white">(Play on pc for full feature of game).</span>
                                     <form action="">
                                             <div class="form-group">
                                                     <label for="select" class="text-white mt-1">Select Level to start game</label>
-                                                    <select class="form-control" id="myselect">
+                                                    <select class="form-control" id="myselect2">
                                                         <option >Select</option>
                                                         <option value="50">level 1</option>
                                                         <option value="35">level 2</option>
@@ -46,7 +46,7 @@
                                                 </div>
                                          </form>
                                         
-                            </div>
+                            </div>-->
                                 <div class="game" style="margin-left:40%">
                                     <form name="game" method="post" action="">
                                         <table class=" t-game" id="myTable">
@@ -79,17 +79,21 @@
                             </div>
 
                             
-                            <div class="col-md-4 mt-4 d-none d-sm-block">
-                                    <div id="clockdiv">
-                                        <div class=" ">
+                            <div class="col-md-4 col-sm-12 mt-4 last">
+                                <div class="d-none d-sm-block">
+                                   <div id="clockdiv" >
+                                        <div class="">
                                             <span id="timer">00</span>
                                             <div class="smalltext">Points</div>
                                         </div>
                                     </div>
-                                 <div class="col-md-4">
-                                        <div class="img mt-2" id="badge"></div>
-                                        <div class="img_badge text-white"></div>
+                                </div>
+                                 <div class="col-md-4 last">
+                                        <div class="img mt-2 d-none d-sm-block" id="badge"></div>
+                                        <div class="img_badge text-white d-none d-sm-block"></div>
                                      <form action="">
+                                            <span class="text-white d-lg-none d-sm-none test">(Play game on pc for full feature)</span> 
+                               
                                         <div class="form-group">
                                                 <label for="select" class="text-white mt-1">Select Level to start game</label>
                                                 <select class="form-control" id="myselect">
@@ -103,7 +107,7 @@
                                             </div>
                                      </form>
                                      <div>
-                                         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#rule">
+                                         <button type="button" class="btn btn-dark d-none d-sm-block" data-toggle="modal" data-target="#rule">
                                             Rules
                                          </button>
                                                   

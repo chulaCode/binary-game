@@ -118,15 +118,21 @@ canvas{
     margin: 4px;
     width: 400px;
   }
+ 
+  .last{
+      top:-45px
+  }
   .replay{
     background-color: #d48f56!important;
   }
-  
+  .first{
+      top: 88px!important;
+  }
     .game{
       margin-top: 20px;
       width: 100px;
       height: 50px;
-      margin-left: 5px!important;
+      margin-left: 10px!important;
     }
    td>.b_game{
       font-size: 20px;
