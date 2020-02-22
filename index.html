@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="game.css">
+
+    <title>binary game</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+       <div class="mx-auto text-white"><H2>BINARY GAME</H2></div>
+   </nav>
+
+    <div id="particles-js">
+        <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="mx-auto mt-4 d-none d-sm-block">      
+                            <span class="text-white">Running progress bar to track game progress from 0% to 100% </span>
+                                <div class="progress">
+                                    <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                        <span id="current-progress"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-8">
+                            <div class="d-lg-none d-md-none">
+                                <span class="text-white">(Play on pc for full feature of game).</span>
+                                    <form action="">
+                                            <div class="form-group">
+                                                    <label for="select" class="text-white mt-1">Select Level to start game</label>
+                                                    <select class="form-control" id="myselect">
+                                                        <option >Select</option>
+                                                        <option value="50">level 1</option>
+                                                        <option value="35">level 2</option>
+                                                        <option value="20">level 3</option>
+                                                        <option value="10">level 4</option>
+                                                        <option value="5">level 5</option>
+                                                    </select>
+                                                </div>
+                                         </form>
+                                        
+                            </div>
+                                <div class="game" style="margin-left:40%">
+                                    <form name="game" method="post" action="">
+                                        <table class=" t-game" id="myTable">
+                                            <tr id="tr1">
+                                                <td><input type="button"id="button1" value="0"class="b_game" name="btn1"  /></td>
+                                                <td><input type="button" id="button2" value="0"class="b_game" name="btn2" /></td>
+                                                <td><input type="button" id="button3"value="0"class="b_game" name="btn3" /></td>
+                                                <td><input type="button" id="button4" value="0"class="b_game" name="btn4" /></td>
+                                                <td><input type="button" id="button5" value="0"class="b_game" name="btn5" /></td>
+                                                <td><input type="button" id="button6" value="1" class="b_game" name="btn6"/></td>
+                                                <td><input type="button" id="button7"value="0"class="b_game" name="btn7"  /></td>
+                                                <td><input type="button" id="button8" value="1"class="b_game" name="btn8" /></td>
+                                                <td><input type="text" id="text1"value="5" style="text-align:center; font-weight:20px;background-color: #10140E;color:white;width:45px; margin-top:-5px;height:30px;line-height: 30px; border-radius: 3px;" name="text"/></td>
+                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                            <td class="txt" id="vertical">128</td>
+                                            <td class="txt"id="vertical">64</td>
+                                            <td class="txt"id="vertical">32</td>
+                                            <td class="txt"id="vertical">16</td>
+                                            <td class="txt"id="vertical">8</td>
+                                            <td class="txt"id="vertical">4</td>
+                                            <td class="txt"id="vertical">2</td>
+                                            <td class="txt"id="vertical">1</td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-md-4 mt-4 d-none d-sm-block">
+                                    <div id="clockdiv">
+                                        <div class=" ">
+                                            <span id="timer">00</span>
+                                            <div class="smalltext">Points</div>
+                                        </div>
+                                    </div>
+                                 <div class="col-md-4">
+                                        <div class="img mt-2" id="badge"></div>
+                                        <div class="img_badge text-white"></div>
+                                     <form action="">
+                                        <div class="form-group">
+                                                <label for="select" class="text-white mt-1">Select Level to start game</label>
+                                                <select class="form-control" id="myselect">
+                                                    <option >Select</option>
+                                                    <option value="50">level 1</option>
+                                                    <option value="35">level 2</option>
+                                                    <option value="20">level 3</option>
+                                                    <option value="10">level 4</option>
+                                                    <option value="5">level 5</option>
+                                                </select>
+                                            </div>
+                                     </form>
+                                     <div>
+                                         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#rule">
+                                            Game rule
+                                         </button>
+                                                  
+                                     </div>
+                                 </div>
+                        <!-- end of col-9 row   -->
+                    </div>
+                    
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><span style="color:#d48f56">Congrats you won!!</span></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                <img class="w-100 h-50 mx-auto" src="images/dance2.gif" alt="">
+                                
+                                </div>
+                                <div class="modal-footer">
+                                <span class="modal-text text-dark" style="margin-right:70px;">You successfully got all the badges.</span>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal">Replay</button>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="lost" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-dark" id="exampleModalLabel"><span style="">Game over you lost.</span></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                <img class="w-100 h-50 mx-auto" src="images/sad.gif" alt="">
+                                
+                                </div>
+                                <div class="modal-footer">
+                                <span class="modal-text text-dark text-bold" style="margin-right:70px;">Click on replay button to play again.</span>
+                                    <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Replay</button>
+                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="rule" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-primary" id="exampleModalLabel"><span style="">Game Rules</span></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <strong><h5>1)</h5></strong> To start game you need to select a level(level 1- level 5) level 1 is the slowest and level 5 is the fastest
+                                      <strong><h5>2)</h5></strong> The game is timed if the time elapses without correctly answering 10 question you'll loose
+                                      <strong><h5>3)</h5></strong> To answer game question you'll some up values with 1's not 0's below their're numbers from 128....1,
+                                      you'll add the value with one to match the last value at the right. If it matches the line will be removed.
+                                      <strong><h5>4)</h5></strong> Correct answer will be removed and you'll get 10 Points
+                                      <strong><h5>5)</h5></strong> if youget 50 points you'll get a silver badge, 90 points you'll get a gold badge and 100 you'll win the game
+                                      <strong><h5>6)</h5></strong> Thank you! enjoy your game.
+                                    </div>
+                                    <div class="modal-footer">
+                                    <span class="modal-text text-dark" style="margin-right:70px;"></span>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+   crossorigin="anonymous"></script>
+ 
+    <script src="game.js"></script>
+    <script src="particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
