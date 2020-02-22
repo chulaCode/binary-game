@@ -96,7 +96,10 @@ canvas{
     font-size: 20px;
     text-align: center;
   }
-  
+  .footer{
+      top: 195px!important;
+      position: relative;
+  }
  
   @media screen and (min-width : 768px) and (max-width : 1024px) {
   
@@ -106,14 +109,16 @@ canvas{
 @media screen and (min-width : 320px) and (max-width : 480px) {
     #particles-js{
         width: 100%;
-        height: 100%;
+        height: 130%;
         background-color: #3700B3;
         background-image: url('');
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
       }
-     
+     .footer{
+         margin-top:210px!important;
+     }
 .progress {
     margin: 4px;
     width: 400px;
