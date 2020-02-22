@@ -99,6 +99,8 @@ canvas{
   .footer{
       top: 195px!important;
       position: relative;
+      width: 110%;
+      margin-left: -15px;
   }
  
   @media screen and (min-width : 768px) and (max-width : 1024px) {
