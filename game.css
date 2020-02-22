@@ -109,7 +109,7 @@ canvas{
 @media screen and (min-width : 320px) and (max-width : 480px) {
     #particles-js{
         width: 100%;
-        height: 130%;
+        height: 145%;
         background-color: #3700B3;
         background-image: url('');
         background-size: cover;
@@ -117,7 +117,9 @@ canvas{
         background-repeat: no-repeat;
       }
      .footer{
-         margin-top:215px!important;
+         margin-top:235px!important;
+         width: 110%;
+         margin-left: -15px;
      }
 .progress {
     margin: 4px;
@@ -131,7 +133,7 @@ canvas{
     background-color: #d48f56!important;
   }
   .first{
-      top: 88px!important;
+      top: 135px!important;
       left: -15px!important;
   }
     .game{
