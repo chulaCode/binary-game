@@ -117,7 +117,7 @@ canvas{
         background-repeat: no-repeat;
       }
      .footer{
-         margin-top:210px!important;
+         margin-top:215px!important;
      }
 .progress {
     margin: 4px;
@@ -132,12 +132,13 @@ canvas{
   }
   .first{
       top: 88px!important;
+      left: -15px!important;
   }
     .game{
       margin-top: 20px;
-      width: 100px;
+      width: 190px;
       height: 50px;
-      margin-left: 10px!important;
+      margin-left: -2px!important;
     }
    td>.b_game{
       font-size: 20px;
@@ -146,9 +147,9 @@ canvas{
       font-weight: bold;
       padding: 0px;
       margin: 2px;
-      height: 20px;
-      width:20px;
-      line-height: 20px;
+      height: 30px;
+      width:30px;
+      line-height: 30px;
       
     }
     .b_game:focus{
