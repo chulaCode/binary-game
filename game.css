@@ -121,8 +121,43 @@ canvas{
   margin-left:20%!important;
 }
 }
-
-@media screen and (min-width : 320px) and (max-width : 680px) {
+@media screen and (min-width : 519px) and (max-width : 640px) {
+  
+  .last{
+    margin-top: 20px!important;
+    position: relative;
+  }
+  #p-text{
+    display: none;
+  }
+  .form-group{
+    margin-left: 90px!important;
+  }
+  .progress{
+    display: none;
+  }
+  #g-rule{
+    display: none
+  }
+  .footer{
+   margin-top:150px!important;
+   width: 110%!important;
+   margin-left: -15px!important;
+   margin-right: -10px!important;
+   display: none;
+}
+.container-fluid{
+ margin: auto!important;
+}
+.game{
+ margin-left:25%!important;
+ margin-top: 30px!important;
+}
+#rule{
+  display: none;
+}
+}
+@media screen and (min-width : 320px) and (max-width : 480px) {
     #particles-js{
         width: 100%;
         height: 145%;

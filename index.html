@@ -22,7 +22,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="mx-auto mt-4 d-none d-sm-block">      
-                            <span class="text-white">Running progress bar to track game progress from 0% to 100% </span>
+                             <span class="text-white" id="p-text">Running progress bar to track game progress from 0% to 100% </span>
                                 <div class="progress">
                                     <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                                         <span id="current-progress"></span>
@@ -83,7 +83,7 @@
                             <div class="col-md-4 col-sm-12 mt-4 last">
                                 <div class="d-none d-sm-block">
                                    <div id="clockdiv" >
-                                        <div class="">
+                                        <div class="pt" id="pt">
                                             <span id="timer">00</span>
                                             <div class="smalltext">Points</div>
                                         </div>
@@ -94,11 +94,11 @@
                                         <div class="img_badge text-white d-none d-sm-block"></div>
                                      <form action="">
                                             <span class="text-white d-lg-none d-sm-none test">(Play game on pc for full feature)</span> 
-                                            <div>
+                                            
                                                     <button type="button" class="btn btn-dark d-lg-none d-md-none" data-toggle="modal" data-target="#rule">
-                                                       Game Rules
+                                                      <span id="g-rule">Game Rules</span>
                                                     </button>
-                                        <div class="form-group">
+                                         <div class="form-group">
                                                 <label for="select" class="text-white mt-1">Select Level & wait for game to start</label>
                                                 <select class="form-control" id="myselect">
                                                     <option >Select</option>
@@ -110,7 +110,7 @@
                                                 </select>
                                             </div>
                                      </form>
-                                     <div>
+                                     <div id="rule">
                                          <button type="button" class="btn btn-dark d-none d-sm-block" data-toggle="modal" data-target="#rule">
                                             Rules
                                          </button>
